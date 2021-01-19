@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<%- include('../partials/head'); %>
+	</head>
+    <main>
+        <header><%- include('../partials/header'); %></header>
+        <div class="container pt-5">
+            <h1>Edit Employee</h1>
+            <!-- <p>Using the submit button we will send a POST request to the database and then display a success message. </p> -->
+         <div class="bg-light p-2 rounded border my-5">
+          
+            <!-- <h2>Edit Employee: First Name</h2> -->
+            <p> <div class="card" style="width: 18rem;">
+​              <a href=`/directory/${id}`</a>
+              <img src="<%= employee.picture %>" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text"><%= employee.firstName %> <%= employee.lastName %></p>
+                <p class="card-text"><%= employee.email %></p>
+                <button type="button" id="edit" href="directory/<%= employee.id%>/edit">Edit</button>
+                <button type="button" id="delete" href="directory/<%= employee.id%>/delete">Delete</button> -->
+            </div>
+            </div></p>
+            <form id="update-employee-form" action="/update/:uid" method="post">
+              <div class="mb-3">
+                <div class="mb-2">  <label for="input-firstName" class="form-label">Update First Name:</label>
+                  <input type="text" name="user[firstName]"></div>
+                <!-- <div class="mb-2">  <label for="input-lastName" class="form-label">Last Name:</label>
+                  <input type="text" name="user[lastName]"></div>
+                <div class="mb-2"><label for="input-email" class="form-label">Email:</label>
+                  <input type="text" name="user[email]"></div>
+                <div class="mb-2">   <label for="input-id" class="form-label">ID:</label>
+                  <input type="text" name="user[id]"></div>
+               <div class="mb-2"> <label for="input-picture" class="form-label">Picture:</label>
+                 <input type="text" name="user[picture]"></div>
+               <div class="mb-2"> <label for="input" class="form-label">Title:</label>
+                  <input type="text-title" name="user[title]"></div> -->
+                <input type="submit" value="Submit" href="/success">
+            </form>
+         </div>
+        </div>
+    </main>
+    <footer><%- include('../partials/footer'); %></footer>
+</body>
+</html>

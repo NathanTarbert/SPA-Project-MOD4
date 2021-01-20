@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
     <head>
 		<%- include('../partials/head'); %>
@@ -8,36 +8,38 @@
   <main>
         <div class="container pt-5">
             <h1 style="text-align: center;">Edit Astronaut</h1>
-            <!-- <p>Using the submit button we will send a POST request to the database and then display a success message. </p> -->
-         <div class="bg-light p-2 rounded border my-5" style="margin-left: 400px; margin-right: 400px;">
-          
-            <!-- <h2>Edit Employee: First Name</h2> -->
+             <p>Using the submit button we will send a POST request to the database and then display a success message. </p>
+         <div class="bg-light p-2 rounded border my-5" ">
+         style="margin-left: 400px; margin-right: 400px; put in class above -->
+            <!-- <h2>Edit Employee: First Name</h2>
             <p> <div class="card-edit-employee" style="width: 18rem;">
 ​              <a href=`/directory/${id}`</a>
               <img src="<%= employee.picture %>" class="card-img-top" alt="...">
               <div class="card-body" style="text-align: right;">
                 <p class="card-text"><%= employee.firstName %> <%= employee.lastName %></p>
-                <p class="card-text"><%= employee.email %></p>
-                <!-- <button type="button" id="edit" href="directory/<%= employee.id%>/edit">Edit</button> -->
+                <p class="card-text"><%= employee.email %></p> -->
+                <!-- <button type="button" id="edit" href="directory/<%= employee.id%>/edit">Edit</button>
                 
             </div>
             </div></p>
             <form id="update-employee-form" action="/update/:uid" method="post">
               <div class="mb-3">
                 <div class="mb-2">  <label for="input-firstName" class="form-label">Update First Name:</label>
-                  <input type="text" placeholder="First Name..." name="user[firstName]" required></div><!--require field from function below-->
+                  <input type="text" placeholder="First Name..." name="user[firstName]" required></div>require field from function below
                   <input type="submit" value="Submit" href="/directory">
-                <!-- <form action="/success" method="GET" target="_blank"/> <!--this will make a "get" request to the server and route back to the directory -->
-                      <!-- <button type="submit" class="btn btn-primary">Directory</button> -->
-                <!-- </form> -->
+                 <form action="/success" method="GET" target="_blank"/>this will make a "get" request to the server and route back to the directory
+                      <button type="submit" class="btn btn-primary">Directory</button>
+                </form>
+              </div>
+            </div>
             <script>
-              // Example starter JavaScript for disabling form submissions if there are invalid fields
+               Example starter JavaScript for disabling form submissions if there are invalid fields
                 (function () {
                   'use strict'
-                  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                  Fetch all the forms we want to apply custom Bootstrap validation styles to
                   var forms = document.querySelectorAll('.needs-validation');
 
-                  // Loop over them and prevent submission
+                   Loop over them and prevent submission
                   Array.prototype.slice.call(forms)
                     .forEach(function (form) {
                       form.addEventListener('submit', function (event) {
@@ -51,11 +53,7 @@
                     })
                 })()
             </script>
-            
-         </div>
-        </div>
       </main>
-      </body>
     <footer><%- include('../partials/footer'); %></footer>
-</body>
+    </body>
 </html>

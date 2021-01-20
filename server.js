@@ -110,7 +110,7 @@ app.get("/success", function (req, res) {
 });
 //Update Emp via PATCH
 var updateEmpId; //this holds id for update POST request below...
-app.get("/update/:uid", function (req, res) {
+app.get("/edit/:uid", function (req, res) {
 	let id = req.params.uid;
 	updateEmpId = id;
 	// console.log(employee)
@@ -126,7 +126,7 @@ app.get("/update/:uid", function (req, res) {
 	  })
 	  .then(function(response){
 		//   console.log(response)
-		res.render("pages/update", {
+		res.render("pages/edit", {
 			employee: response, //<--this is your variable key that you will use in your page templating
 		});
 	})
@@ -135,7 +135,7 @@ app.get("/update/:uid", function (req, res) {
 	  });
 });
 //update employee
-app.post("/update/:uid", function (req, res) {
+app.post("/edit/:uid", function (req, res) {
 	console.log("update post function fired");
 	let id = updateEmpId;
 	console.log(id);

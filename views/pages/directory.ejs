@@ -9,11 +9,9 @@
 			<div class="container">
 				
 				<h1>Top Astronauts</h1>
-				<div class="container">
-					
+				<div class="container">					
         </div>
-				<div class="row justify-content-between">		
-		   
+				<div class="row justify-content-between">		   
 		  
 			 	<% employees.forEach(function(employee){ %>
             	<p><div class="card" style="width: 18rem">
@@ -22,7 +20,7 @@
 					  <p class="card-text"><%= employee[1].firstName %> <%= employee[1].lastName %></p>
 					  <p class="card-text"><%= employee[1].email %></p>
 					  <a class="btn btn-secondary mtn-sm" href="directory/<%= employee[0]%>";">View Profile</a>
-					  <a class="btn btn-info mtn-sm" href="update/<%= employee[0]%>">Edit</a>
+					  <a class="btn btn-info mtn-sm" href="edit/<%= employee[0]%>">Edit</a>
 					  <a class="btn btn-danger" href="delete/<%= employee[0]%>"style="height:85px;width:85px">
 						<i class="fa fa-trash-o fa-lg"></i>Delete</a>
 					</div>

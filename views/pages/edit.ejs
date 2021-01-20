@@ -1,41 +1,36 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
+  <head>
 		<%- include('../partials/head'); %>
-    </head>
-  <body>
-        <header><%- include('../partials/header'); %></header>
-  <main>
+  </head>
+  <header><%- include('../partials/header'); %></header>
+    <main>
         <div class="container pt-5">
-            <h1>Edit Employee</h1>
-         <p>Using the submit button we will send a POST request to the database and then display a success message. </p>
-         <div class="bg-light p-2 rounded border my-5">
-          
-            <h2>Edit Employee: First Name</h2>
+            
+         <div class="bg-light p-2 rounded border my-5" style="margin-left: 400px; margin-right: 400px">
+         
+            <h1>Add Astronaut</h1>
             <p> <div class="card" style="width: 18rem;">
-​              <a href=`/directory/${id}`</a>
-              <img src="<%= employee.picture %>" class="card-img-top" alt="...">
-              <div class="card-body">
-                <p class="card-text"><%= employee.firstName %> <%= employee.lastName %></p>
-                <p class="card-text"><%= employee.email %></p>
-                <button type="button" id="edit" href="directory/<%= employee.id%>/edit">Edit</button>
-                <button type="button" id="delete" href="directory/<%= employee.id%>/delete">Delete</button>
+            <img src="<%= employee.picture %>" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text"><%= employee.firstName %> <%= employee.lastName %></p>
+              <p class="card-text"><%= employee.email %></p>
+                            
             </div>
             </div></p>
-            <form id="update-employee-form" action="/update/:uid" method="post">
+            <form id="update-employee-form" action="/edit/:uid" method="post">
               <div class="mb-3">
                 <div class="mb-2">  <label for="input-firstName" class="form-label">Update First Name:</label>
-                  <input type="text" name="user[firstName]" required></div><require field from function below-->
-                <!-- <input type="submit" value="Submit" href="/success">
-                <form action="/directory" method="GET" target="_blank"/><this will make a "get" request to the server and route back to the directory
-                      <button type="submit" class="btn btn-primary">Directory</button>
+                  <input type="text" name="user[firstName]" required></div>
+                <input type="submit" value="Submit" href="/success">
             </form>
             <script>
               // Example starter JavaScript for disabling form submissions if there are invalid fields
                 (function () {
                   'use strict'
+
                   // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                  var forms = document.querySelectorAll('.needs-validation');
+                  var forms = document.querySelectorAll('.needs-validation')
 
                   // Loop over them and prevent submission
                   Array.prototype.slice.call(forms)
@@ -50,11 +45,10 @@
                       }, false)
                     })
                 })()
-            </script>
+                </script>     
          </div>
         </div>
-      </main>
-      </body>
+    </main>
     <footer><%- include('../partials/footer'); %></footer>
 </body>
-</html> -->
+</html>

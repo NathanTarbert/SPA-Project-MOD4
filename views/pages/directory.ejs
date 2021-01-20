@@ -5,11 +5,10 @@
 	</head>
 	<body class="container">
 		<header><%- include('../partials/header'); %></header>
-
 		<main>
 			<div class="container">
 				
-				<h1>Top employees</h1>
+				<h1>Top Astronauts</h1>
 				<div class="container">
 					
         </div>
@@ -17,9 +16,9 @@
 		   
 		  
 			 	<% employees.forEach(function(employee){ %>
-            	<p><div class="card" style="width: 18rem;">
+            	<p><div class="card" style="width: 18rem">
 					<img src="<%= employee[1].picture %>" class="card-img-top" alt="...">
-					<div class="card-body" style="font-size: larger; background-color: gray;">
+					<div class="card-body" 
 					  <p class="card-text"><%= employee[1].firstName %> <%= employee[1].lastName %></p>
 					  <p class="card-text"><%= employee[1].email %></p>
 					  <a class="btn btn-secondary mtn-sm" href="directory/<%= employee[0]%>";">View Profile</a>
